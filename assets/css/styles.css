@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding-top: 70px;
 }
@@ -31,13 +33,13 @@ body {
 }
 
 .nav .title {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .nav .links {
   float: right;
   padding: 10px 0;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .nav li {
@@ -46,7 +48,7 @@ body {
 
 .hero {
   width: 100%;
-  background: #45afb1;
+  background: #45afb1 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJElEQVQIW2NkwASSjGhikgwMDM+RBcECIEUwQZgAXCVcBcwoALvlBR8NvK9zAAAAAElFTkSuQmCC) repeat;
   padding: 150px 0;
   text-align: center;
   color: white;
@@ -57,7 +59,8 @@ body {
 }
 
 .hero p {
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-weight: 300;
 }
 
 .hero h1,

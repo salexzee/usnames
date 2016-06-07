@@ -1,2 +1,2 @@
-U.S. Names api
+U.S. Names API
 ===
