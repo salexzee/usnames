@@ -11,7 +11,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 // Database
-mongoose.connect('mongodb://localhost/people')
+mongoose.connect(process.env.MLAB_URL || 'mongodb://localhost/people')
 
 app.use('/public', express.static(`${__dirname}/assets`))
 
