@@ -167,7 +167,7 @@ pre {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: #333;
+  background: #888;
   color: #ddd;
   font-size: .8em;
 }
@@ -189,4 +189,8 @@ pre {
 
 .footer a {
   color: #ddd;
+}
+
+.footer a:hover {
+  color: white;
 }

@@ -41,8 +41,7 @@ html(lang="en")
         
         h3 Using jQuery
         p It isn't too difficult to difficult to grab API information with jQuery.
-        pre
-          $.ajax({
+        pre $.ajax({
           |   url: 'http://localhost:3000/api/names/male',
           |   method: 'get',
           |   success: function(names) {
@@ -75,7 +74,7 @@ html(lang="en")
         
 
     footer.footer
-      p Copyright &copy; 2016 Sam Webb. All rights reserved.
+      p Copyright &copy; 2016 #[a(href="http://samwebb.me") Sam Webb]. All rights reserved.
       ul
         li
-          a(href="#") Admin Login
+          a(href="/login") Admin Login
