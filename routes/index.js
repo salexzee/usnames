@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/api/name/:name', (req, res, next) => {
-  Name.findOne({_id: req.params.name}, (err, person) => {
+  Name.findOne({name: req.params.name}, (err, person) => {
     if(err) res.redirect('/')
     res.json(person)
   })
