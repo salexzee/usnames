@@ -33,6 +33,12 @@ body {
   margin: 0 auto;
 }
 
+pre {
+  padding: 10px;
+  background: #444;
+  color: #ddd;
+}
+
 
 /**************/
 /* NAVIGATION */
@@ -140,6 +146,12 @@ body {
 
 #docs a {
   color: #45afb1;
+}
+
+#docs .warning {
+  background: #cc8989;
+  border: 1px solid #d66;
+  padding: 10px;
 }
 
 

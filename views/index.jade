@@ -3,6 +3,7 @@ html(lang="en")
   head
     title= title
     link(rel="stylesheet", href="/public/css/styles.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
   body
     nav.nav
       .title
@@ -36,6 +37,41 @@ html(lang="en")
           li /api/people/:gender - (Returns JSON containing all names of the specified gender)
           li /api/person/:name - (Returns JSON for the specified name)
         p To see an example of each, check out the following links: #[a(href="#" id="allDrop") All Names] - #[a(href="#" id="maleDrop") Males] - #[a(href="#" id="femaleDrop") Females]
+        p Luckily for you, to use this API there are no secret keys required. You can simply hit one of the endpoints to get the information you need. Let's get into the code.
+        
+        h3 Using jQuery
+        p It isn't too difficult to difficult to grab API information with jQuery.
+        pre
+          $.ajax({
+          |   url: 'http://localhost:3000/api/names/male',
+          |   method: 'get',
+          |   success: function(names) {
+          |     console.log(names) 
+          |   }
+          |})
+        p This snippet will pass an array of objects (male names) in the variable #[code names] and log it to the screen. It will look something like this:
+        pre [
+          |    {
+          |      _id: "5756815fbc5848057c9200d6",
+          |      gender: "male",
+          |      name: "sam"
+          |    },
+          |    {
+          |      _id: "57568161f182f2087c706e2e",
+          |      gender: "male",
+          |      name: "alex"
+          |    },
+          |    {
+          |      _id: "5756815fbc5848057c9200d4",
+          |      gender: "male",
+          |      name: "mike"
+          |    },
+          |    {
+          |      ...
+          |    }
+          |]
+        p From there, it is up to you how you use the names. &#128521;
+        p.warning WARNING: Running this code in certain browsers (Chrome) will not work properly due to tighter security. If your webpage is being served up from a server, you're good to go.
 
     footer.footer
       p Copyright &copy; 2016 Sam Webb. All rights reserved.
