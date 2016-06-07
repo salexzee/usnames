@@ -1,24 +1,27 @@
 "use strict"
 
+// Requires
 const express = require('express')
+const mongoose = require('mongoose')
+const Person = require('./db/Person')
+const routes = require('./routes/index')
 
+// Variable setup
 const app = express()
 const PORT = process.env.PORT || 3000
 
-app.get('/', (req, res) => {
-  res.json({Hello: 'World'})
-})
+// Database
+mongoose.connect('mongodb://localhost/people')
 
-app.get('/api/person/:id', (req, res) => {
-  res.json({name: 'Mike'})
-})
+// Sets view engine to use Jade
+app.set('view engine', 'jade')
 
-app.get('/api/people', (req, res) => {
-  res.json({name: 'Sam'})
-})
+// Routes
+app.use('/', routes)
+app.get('/api/person/:id', routes)
+app.get('/api/people', routes)
+app.get('/api/people/:gender', routes)
 
-app.get('/api/people/:gender', (req, res) => {
-  res.json({name: 'Tim'})
-})
-
+// Starts listening on the set PORT
+console.log(`Listening on port: ${PORT}`)
 app.listen(PORT)
