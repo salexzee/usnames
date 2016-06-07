@@ -1,10 +1,42 @@
+
+/*********/
+/* FONTS */
+
+/*********/
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+
+/***************/
+/* MAIN STYLES */
+/***************/
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  padding-bottom: 100px;
+}
 
 body {
   font-family: 'Lato', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding-top: 70px;
+  min-height: 100%;
+  width: 100%;
 }
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+/**************/
+/* NAVIGATION */
+/**************/
 
 .nav {
   background: white;
@@ -46,6 +78,11 @@ body {
   margin-left: 15px;
 }
 
+
+/****************/
+/* HERO SECTION */
+/****************/
+
 .hero {
   width: 100%;
   background: #45afb1 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJElEQVQIW2NkwASSjGhikgwMDM+RBcECIEUwQZgAXCVcBcwoALvlBR8NvK9zAAAAAElFTkSuQmCC) repeat;
@@ -83,4 +120,57 @@ body {
 .hero a:hover {
   background: white;
   color: #45afb1;
+}
+
+
+/*****************/
+/* DOCUMENTATION */
+/*****************/
+
+#docs {
+  margin-top: 100px;
+  color: #3b3b3b;
+}
+
+#docs h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2em;
+}
+
+#docs a {
+  color: #45afb1;
+}
+
+
+/******************/
+/* FOOTER SECTION */
+/******************/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #333;
+  color: #ddd;
+  font-size: .8em;
+}
+
+.footer p {
+  margin-left: 25px;
+}
+
+.footer  p,
+.footer ul,
+.footer li {
+  display: inline-block;
+}
+
+.footer ul {
+  float: right;
+  margin-right: 25px;
+}
+
+.footer a {
+  color: #ddd;
 }

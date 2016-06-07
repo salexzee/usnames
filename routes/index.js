@@ -9,14 +9,14 @@ router.get('/', (req, res, next) => {
   })
 })
 
-router.get('/api/person/:name', (req, res, next) => {
+router.get('/api/name/:name', (req, res, next) => {
   Person.findOne({_id: req.params.name}, (err, person) => {
     if(err) res.redirect('/')
     res.json(person)
   })
 })
 
-router.get('/api/people', (req, res, next) => {
+router.get('/api/names', (req, res, next) => {
   Person.find()
     .sort({name: 'asc'})
     .exec((err, people) => {
@@ -25,7 +25,7 @@ router.get('/api/people', (req, res, next) => {
     })
 })
 
-router.get('/api/people/:gender', (req, res, next) => {
+router.get('/api/names/:gender', (req, res, next) => {
   Person.find({gender: req.params.gender})
     .sort({name: 'asc'})
     .exec((err, people) => {

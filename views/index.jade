@@ -12,11 +12,11 @@ html(lang="en")
           li
             a(href="#docs") API Docs
           li
-            a(href="api/people" target="_blank") All Names
+            a(href="api/names" target="_blank") All Names
           li
-            a(href="api/people/male" target="_blank") Males
+            a(href="api/names/male" target="_blank") Males
           li
-            a(href="api/people/female" target="_blank") Females
+            a(href="api/names/female" target="_blank") Females
           li
             a(href="https://github.com/salexzee/usnames" target="_blank") GitHub
             
@@ -24,3 +24,21 @@ html(lang="en")
       h1= title
       p An API of U.S. male and female first names.
       a(href="#docs" id="heroBtn") View API Docs
+    
+    .container  
+      #docs
+        h2 API Documentation
+        
+        h3 Getting Started
+        p U.S. Names API is a fairly simple API to use. There are three endpoints for users to access:
+        ul
+          li /api/people - (Returns JSON containing all names)
+          li /api/people/:gender - (Returns JSON containing all names of the specified gender)
+          li /api/person/:name - (Returns JSON for the specified name)
+        p To see an example of each, check out the following links: #[a(href="#" id="allDrop") All Names] - #[a(href="#" id="maleDrop") Males] - #[a(href="#" id="femaleDrop") Females]
+
+    footer.footer
+      p Copyright &copy; 2016 Sam Webb. All rights reserved.
+      ul
+        li
+          a(href="#") Admin Login
