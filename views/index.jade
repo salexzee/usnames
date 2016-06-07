@@ -32,17 +32,18 @@ html(lang="en")
         
         h3 Getting Started
         p U.S. Names API is a fairly simple API to use. There are three endpoints for users to access:
+        p URL: #[code= "https://usnames.herokuapp.com/api"]
         ul
-          li /api/people - (Returns JSON containing all names)
-          li /api/people/:gender - (Returns JSON containing all names of the specified gender)
-          li /api/person/:name - (Returns JSON for the specified name)
+          li #[code /people] - (Returns JSON containing all names)
+          li #[code /people/:gender] - (Returns JSON containing all names of the specified gender)
+          li #[code /person/:name] - (Returns JSON for the specified name)
         p To see an example of each, check out the following links: #[a(href="api/names" target="_blank") All Names] - #[a(href="api/names/male" target="_blank") Males] - #[a(href="api/names/female" target="_blank") Females]        
         p Luckily for you, to use this API there are no secret keys required. You can simply hit one of the endpoints to get the information you need. Let's get into the code.
         
         h3 Using jQuery
         p It isn't too difficult to difficult to grab API information with jQuery.
         pre $.ajax({
-          |   url: 'http://localhost:3000/api/names/male',
+          |   url: 'https://usnames.herokuapp.com/api/names/male',
           |   method: 'get',
           |   success: function(names) {
           |     console.log(names) 
