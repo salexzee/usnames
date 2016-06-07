@@ -36,7 +36,7 @@ html(lang="en")
           li /api/people - (Returns JSON containing all names)
           li /api/people/:gender - (Returns JSON containing all names of the specified gender)
           li /api/person/:name - (Returns JSON for the specified name)
-        p To see an example of each, check out the following links: #[a(href="#" id="allDrop") All Names] - #[a(href="#" id="maleDrop") Males] - #[a(href="#" id="femaleDrop") Females]
+        p To see an example of each, check out the following links: #[a(href="api/names" target="_blank") All Names] - #[a(href="api/names/male" target="_blank") Males] - #[a(href="api/names/female" target="_blank") Females]        
         p Luckily for you, to use this API there are no secret keys required. You can simply hit one of the endpoints to get the information you need. Let's get into the code.
         
         h3 Using jQuery
@@ -54,17 +54,17 @@ html(lang="en")
           |    {
           |      _id: "5756815fbc5848057c9200d6",
           |      gender: "male",
-          |      name: "sam"
+          |      name: "alex"
           |    },
           |    {
           |      _id: "57568161f182f2087c706e2e",
           |      gender: "male",
-          |      name: "alex"
+          |      name: "mike"
           |    },
           |    {
           |      _id: "5756815fbc5848057c9200d4",
           |      gender: "male",
-          |      name: "mike"
+          |      name: "sam"
           |    },
           |    {
           |      ...
