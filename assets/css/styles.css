@@ -174,17 +174,7 @@ pre {
 
 .footer p {
   margin-left: 25px;
-}
-
-.footer  p,
-.footer ul,
-.footer li {
   display: inline-block;
-}
-
-.footer ul {
-  float: right;
-  margin-right: 25px;
 }
 
 .footer a {

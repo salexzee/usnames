@@ -4,10 +4,14 @@ html(lang="en")
     title= title
     link(rel="stylesheet", href="/public/css/styles.css")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="/public/js/app.js")
+    script.
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
   body
     nav.nav
       .title
-        h2= title
+        h2
+          a(href="/")= title
       .links
         ul
           li
@@ -73,9 +77,8 @@ html(lang="en")
         p From there, it is up to you how you use the names. &#128521;
         p.warning WARNING: Running this code in the console of certain browsers (Chrome) will not work properly due to tighter security. But if your webpage is being served up from a server, you're good to go.
         
-
+        h3 Don't See Your Name?
+        p If your name is not in this API and you think it should be, tell me your name by sending a #[a.twitter-share-button(href='https://twitter.com/share', data-text='Hey! You should add my name to U.S. Names API!', data-via='SamTheWebb', data-hashtags='javascript,node,api', data-dnt='true') tweet]
+         
     footer.footer
       p Copyright &copy; 2016 #[a(href="http://samwebb.me") Sam Webb]. All rights reserved.
-      ul
-        li
-          a(href="/login") Admin Login
