@@ -144,6 +144,10 @@ pre {
   font-size: 2em;
 }
 
+#docs h3 {
+  text-decoration: underline;
+}
+
 #docs a {
   color: #45afb1;
 }
