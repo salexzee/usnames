@@ -2,5 +2,25 @@ doctype html
 html(lang="en")
   head
     title= title
+    link(rel="stylesheet", href="/public/css/styles.css")
   body
-    h1= title
+    nav.nav
+      .title
+        h2= title
+      .links
+        ul
+          li
+            a(href="#docs") API Docs
+          li
+            a(href="api/people" target="_blank") All Names
+          li
+            a(href="api/people/male" target="_blank") Males
+          li
+            a(href="api/people/female" target="_blank") Females
+          li
+            a(href="GitHub" target="_blank") GitHub
+            
+    .hero
+      h1= title
+      p An API of common U.S. male and female first names.
+      a(href="#docs" id="heroBtn") View API Docs

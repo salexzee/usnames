@@ -9,16 +9,29 @@ router.get('/', (req, res, next) => {
   })
 })
 
-router.get('/api/person/:id', (req, res, next) => {
-  res.json({name: 'Mike'})
+router.get('/api/person/:name', (req, res, next) => {
+  Person.findOne({_id: req.params.name}, (err, person) => {
+    if(err) res.redirect('/')
+    res.json(person)
+  })
 })
 
 router.get('/api/people', (req, res, next) => {
-  res.json({name: 'Sam'})
+  Person.find()
+    .sort({name: 'asc'})
+    .exec((err, people) => {
+      if (err) res.redirect('/')
+      res.json(people)
+    })
 })
 
 router.get('/api/people/:gender', (req, res, next) => {
-  res.json({name: 'Tim'})
+  Person.find({gender: req.params.gender})
+    .sort({name: 'asc'})
+    .exec((err, people) => {
+      if (err) res.redirect('/')
+      res.json(people)
+    })
 })
 
 

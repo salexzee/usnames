@@ -8,6 +8,4 @@ const PersonSchema = new mongoose.Schema({
 
 const Person = mongoose.model('Person', PersonSchema)
 
-module.exports = {
-  Person
-}
+module.exports = Person

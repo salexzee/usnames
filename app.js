@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 3000
 // Database
 mongoose.connect('mongodb://localhost/people')
 
+app.use('/public', express.static(`${__dirname}/assets`))
+
 // Sets view engine to use Jade
 app.set('view engine', 'jade')
 
