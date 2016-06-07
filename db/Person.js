@@ -1,11 +1,11 @@
 'use strict'
 const mongoose = require('mongoose')
 
-const PersonSchema = new mongoose.Schema({
+const NameSchema = new mongoose.Schema({
   name: String,
   gender: String
 })
 
-const Person = mongoose.model('Person', PersonSchema)
+const Name = mongoose.model('Name', NameSchema)
 
-module.exports = Person
+module.exports = Name
