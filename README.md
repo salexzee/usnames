@@ -7,9 +7,9 @@ U.S. Names API is a fairly simple API to use. There are three endpoints for user
 
 URL: `https://usnames.herokuapp.com/api`
 
-- /people - (Returns JSON containing all names)
-- /people/:gender - (Returns JSON containing all names of the specified gender)
-- /person/:name - (Returns JSON for the specified name)
+- /names - (Returns JSON containing all names)
+- /names/:gender - (Returns JSON containing all names of the specified gender)
+- /name/:name - (Returns JSON for the specified name)
 
 Luckily for you, to use this API there are no secret keys required. You can simply hit one of the endpoints to get the information you need. Let's get into the code.
 
