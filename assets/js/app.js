@@ -1,4 +1,5 @@
 $(function() {
+  // Smooth Scroll
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -11,4 +12,12 @@ $(function() {
       }
     }
   });
+});
+
+$(window).scroll(function(){
+  var wScroll = $(this).scrollTop();
+
+  $('#heroBtn').css({
+    'transform': 'translate(0px, ' + wScroll / 2.5 + '%)'
+  })
 });

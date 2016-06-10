@@ -50,6 +50,7 @@ pre {
   top: 0;
   width: 100%;
   box-shadow: 0 0 10px #777;
+  z-index: 5;
 }
 
 .nav,
@@ -95,6 +96,8 @@ pre {
   padding: 150px 0;
   text-align: center;
   color: white;
+  height: 200px;
+  overflow: hidden;
 }
 
 .hero h1 {
@@ -119,8 +122,10 @@ pre {
   border-radius: 10px;
   margin-top: 20px;
   text-decoration: none;
-  transition: .2s;
+  transition: background .2s, color .2s;
   font-size: 1.2em;
+  background: hsla(0, 0%, 100%, .1);
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, .3)
 }
 
 .hero a:hover {
@@ -153,8 +158,8 @@ pre {
 }
 
 #docs .warning {
-  background: #cc8989;
-  border: 1px solid #d66;
+  background: #fda65c;
+  border: 1px solid #a76420;
   padding: 10px;
 }
 
@@ -167,9 +172,10 @@ pre {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: #888;
-  color: #ddd;
+  background: #45afb1;
+  color: #eee;
   font-size: .8em;
+  padding: 10px 0;
 }
 
 .footer p {
@@ -178,7 +184,7 @@ pre {
 }
 
 .footer a {
-  color: #ddd;
+  color: #eee;
 }
 
 .footer a:hover {
